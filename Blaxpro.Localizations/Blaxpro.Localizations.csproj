@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyName>Blaxpro.Localizations</AssemblyName>
+    <RootNamespace>Blaxpro.Localizations</RootNamespace>
+    <Version>0.0.1</Version>
+    <Authors>Pablo Jimena López</Authors>
+    <Company>Blaxpro</Company>
+    <Description>Simple localization service for managing localized strings</Description>
+    <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+  </PropertyGroup>
+
+</Project>
