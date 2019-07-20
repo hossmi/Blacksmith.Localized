@@ -1,5 +1,5 @@
 ﻿
-using Blaxpro.Localizations.Attributes;
+using Blaxpro.LocalizedStrings.Attributes;
 
 namespace Translations.Tests.TranslationFromInterface
 {

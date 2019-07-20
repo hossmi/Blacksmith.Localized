@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Blaxpro.Localizations.Services
+namespace Blaxpro.LocalizedStrings.Services
 {
     public interface ILocalizationService
     {
