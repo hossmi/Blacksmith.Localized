@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using Blaxpro.LocalizedStrings.Attributes;
+using Blaxpro.Localized.Attributes;
 
-namespace Blaxpro.LocalizedStrings.Services
+namespace Blaxpro.Localized.Services
 {
     public class LocalizationService : ILocalizationService
     {

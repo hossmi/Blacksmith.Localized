@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Blaxpro.LocalizedStrings.Attributes
+namespace Blaxpro.Localized.Attributes
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
     public class CultureAttribute : Attribute

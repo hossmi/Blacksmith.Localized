@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blaxpro.LocalizedStrings.Tests", "Blaxpro.LocalizedStrings.Tests\Blaxpro.LocalizedStrings.Tests.csproj", "{FD210CE0-71B4-4D99-8FE6-A4521C6437B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blaxpro.Localized.Tests", "Blaxpro.Localized.Tests\Blaxpro.Localized.Tests.csproj", "{FD210CE0-71B4-4D99-8FE6-A4521C6437B4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blaxpro.LocalizedStrings", "Blaxpro.LocalizedStrings\Blaxpro.LocalizedStrings.csproj", "{8782C2A9-4D93-4ED7-9658-2538B48FF78D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blaxpro.Localized", "Blaxpro.Localized\Blaxpro.Localized.csproj", "{8782C2A9-4D93-4ED7-9658-2538B48FF78D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

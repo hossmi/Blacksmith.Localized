@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Blaxpro.LocalizedStrings\Blaxpro.LocalizedStrings.csproj" />
+    <ProjectReference Include="..\Blaxpro.Localized\Blaxpro.Localized.csproj" />
   </ItemGroup>
 
 </Project>

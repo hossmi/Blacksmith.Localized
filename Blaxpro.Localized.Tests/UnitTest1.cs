@@ -1,5 +1,5 @@
 using System.Globalization;
-using Blaxpro.LocalizedStrings.Services;
+using Blaxpro.Localized.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Translations.Tests.TranslationFromBaseClass;
 using Translations.Tests.TranslationFromInterface;
