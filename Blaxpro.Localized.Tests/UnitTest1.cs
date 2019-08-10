@@ -1,5 +1,8 @@
+using System;
 using System.Globalization;
+using Blaxpro.Localized.Exceptions;
 using Blaxpro.Localized.Services;
+using Blaxpro.Localized.Tests.TranslationFromHibridInterfaceAndBaseClass;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Translations.Tests.TranslationFromBaseClass;
 using Translations.Tests.TranslationFromInterface;
@@ -58,6 +61,38 @@ namespace Translations.Tests
 
             someString = strings.ShopBasket;
             Assert.AreEqual("Shopping basket", someString);
+        }
+
+        [TestMethod]
+        public void TestMethod3()
+        {
+            string someString;
+            ILocalizationService localizationService;
+            ISomeDerivedStrings strings;
+
+            localizationService = new LocalizationService();
+
+            localizationService.CurrentCulture = CultureInfo.GetCultureInfo("es-es");
+            strings = localizationService.get<ISomeDerivedStrings>();
+
+            someString = strings.SomeDerivedString;
+            Assert.AreEqual("Cadena traducida y derivada.", someString);
+
+            someString = strings.SomeString1;
+            Assert.AreEqual("Some String 1", someString);
+
+            localizationService.CurrentCulture = CultureInfo.GetCultureInfo("en-us");
+
+            try
+            {
+                strings = localizationService.get<ISomeDerivedStrings>();
+                Assert.Fail();
+            }
+            catch (MissingLocalizationException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
     }
 }

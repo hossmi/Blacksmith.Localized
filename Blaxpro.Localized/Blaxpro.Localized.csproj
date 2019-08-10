@@ -8,8 +8,4 @@
     <FileVersion>0.0.6.0</FileVersion>
   </PropertyGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(TargetDir)..\$(TargetName).*.nupkg&quot; &quot;%public%\nuget-repo\&quot; /Y" />
-  </Target>
-
 </Project>
