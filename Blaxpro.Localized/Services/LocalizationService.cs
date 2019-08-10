@@ -35,9 +35,14 @@ namespace Blaxpro.Localized.Services
                 .GetAssemblies()
                 .Where(ass => ass.IsDynamic == false)
                 .SelectMany(ass => ass.GetExportedTypes())
+                .Where(t => t.IsInterface == false)
                 .Where(t => interfaceType.IsAssignableFrom(t))
-                .FirstOrDefault(t => t.GetCustomAttribute<CultureAttribute>(true)?.Culture == this.CurrentCulture)
-                ?? throw new MissingLocalizationException($"Cannot find localization class for '{interfaceType.Name}' in {this.CurrentCulture.DisplayName} culture ({this.CurrentCulture}).");
+                .SingleOrDefault(t => t
+                    .GetCustomAttributes<CultureAttribute>(true)
+                    .Any(a => a.Culture.Name == this.CurrentCulture.Name));
+
+            if(targetType == null)
+                throw new MissingLocalizationException($"Cannot find localization class for '{interfaceType.Name}' in '{this.CurrentCulture.Name}'.");
 
             instance = (T)Activator.CreateInstance(targetType);
 
