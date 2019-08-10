@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using Blaxpro.Localized.Attributes;
+using Blaxpro.Localized.Exceptions;
 
 namespace Blaxpro.Localized.Services
 {
@@ -36,7 +37,7 @@ namespace Blaxpro.Localized.Services
                 .SelectMany(ass => ass.GetExportedTypes())
                 .Where(t => interfaceType.IsAssignableFrom(t))
                 .FirstOrDefault(t => t.GetCustomAttribute<CultureAttribute>(true)?.Culture == this.CurrentCulture)
-                ?? throw new ArgumentNullException($"Cannot find type derived from {interfaceType.Name} for culture {this.CurrentCulture}");
+                ?? throw new MissingLocalizationException($"Cannot find localization class for '{interfaceType.Name}' in {this.CurrentCulture.DisplayName} culture ({this.CurrentCulture}).");
 
             instance = (T)Activator.CreateInstance(targetType);
 
