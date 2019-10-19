@@ -1,8 +1,8 @@
 using System;
 using System.Globalization;
-using Blaxpro.Localized.Exceptions;
-using Blaxpro.Localized.Services;
-using Blaxpro.Localized.Tests.TranslationFromHibridInterfaceAndBaseClass;
+using Blacksmith.Localized.Exceptions;
+using Blacksmith.Localized.Services;
+using Blacksmith.Localized.Tests.TranslationFromHibridInterfaceAndBaseClass;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Translations.Tests.TranslationFromBaseClass;
 using Translations.Tests.TranslationFromInterface;

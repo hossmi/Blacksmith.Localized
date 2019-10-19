@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Blaxpro.Localized.Services
+namespace Blacksmith.Localized.Services
 {
     public interface ILocalizationService
     {

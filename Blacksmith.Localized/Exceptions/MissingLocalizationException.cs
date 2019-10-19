@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Blaxpro.Localized.Exceptions
+namespace Blacksmith.Localized.Exceptions
 {
     [Serializable]
     public class MissingLocalizationException : Exception

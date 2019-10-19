@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using Blaxpro.Localized.Attributes;
-using Blaxpro.Localized.Exceptions;
+using Blacksmith.Localized.Attributes;
+using Blacksmith.Localized.Exceptions;
 
-namespace Blaxpro.Localized.Services
+namespace Blacksmith.Localized.Services
 {
     public class LocalizationService : ILocalizationService
     {
