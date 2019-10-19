@@ -1,6 +1,6 @@
-﻿using Blaxpro.Localized.Attributes;
+﻿using Blacksmith.Localized.Attributes;
 
-namespace Blaxpro.Localized.Tests.TranslationFromHibridInterfaceAndBaseClass
+namespace Blacksmith.Localized.Tests.TranslationFromHibridInterfaceAndBaseClass
 {
     [Culture("es-es")]
     public class EsSomeDerivedStrings : EnSomeStrings, ISomeDerivedStrings

@@ -1,5 +1,5 @@
 ﻿
-using Blaxpro.Localized.Attributes;
+using Blacksmith.Localized.Attributes;
 
 namespace Translations.Tests.TranslationFromBaseClass
 {
