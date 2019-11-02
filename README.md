@@ -31,13 +31,27 @@ public class SpanishCustomStrings : ICustomStrings
 }
 ```
 
-- Step 3: Add `LocalizationService` to dependency constructor
+- Step 3: Add `ILocalizationService` to dependency injector engine
 ```cs
-ILocalizationService localizationService;
-ICustomStrings customStrings;
+	someDependencyResolver
+		.register<ILocalizationService>(() => new LocalizationService())
+		.register<ICustomStrings>(diConteiner => 
+		{
+			return diConteiner
+				.Resolve<ILocalizationService>()
+				.get<ICustomStrings>();
+		});
+```
 
-localizationService = new LocalizationService();
-localizationService.CurrentCulture = CultureInfo.GetCultureInfo("es-es") /* optional! */;
+- Step 4: Add dependency to ILocalizationService to you services, controllers, etc.
+```cs
+public class SomeService
+{
+	private readonly ICustomStrings strings;
 
-customStrings = localizationService.get<ICustomStrings>();
+	public SomeService(ICustomStrings strings)
+	{
+		this.strings = strings;
+	}
+}
 ```
